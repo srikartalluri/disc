@@ -5,6 +5,11 @@ from discord.ext import commands, tasks
 import requests
 from bs4 import BeautifulSoup
 import random
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+token = os.getenv('TOKEN')
 
 # GETS THE CLIENT OBJECT FROM DISCORD.PY. CLIENT IS SYNONYMOUS WITH BOT.
 bot = discord.Client()
@@ -84,6 +89,6 @@ async def join(ctx):
 
 
 # EXECUTES THE BOT WITH THE SPECIFIED TOKEN. TOKEN HAS BEEN REMOVED AND USED JUST AS AN EXAMPLE.
-bot.run("OTQ5OTAwMDU2NDc0MDQyMzc4.YiRFXQ.feZ3pM6jUBQce6jQZOxc04baFYw")
+bot.run(token)
 
 
